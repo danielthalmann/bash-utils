@@ -1,0 +1,41 @@
+
+# Alias
+
+## Docker commands
+
+alias dl="docker ps -l -q"
+alias dps="docker ps"
+alias di="docker images"
+alias dex="docker exec -i -t"
+alias dboot="sudo service docker start"
+
+## Git commands
+
+alias gs="git status"
+alias gst="git status -sb"
+alias gl="git log"
+alias ga="git add"
+alias gaa="git add -A"
+alias gal="git add ."
+alias gall="git add ."
+alias gca="git commit -a"
+alias gc="git commit -m"
+alias gcot="git checkout"
+alias gchekout="git checkout"
+alias gchckout="git checkout"
+alias gckout="git checkout"
+alias go="git push -u origin"
+alias gsh='git stash'
+alias gw='git whatchanged'
+
+# Commands
+
+## prompt
+
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
+}
+export PS1="\[\e[1;32m\]\u@\h\[\e[0m\]:\[\e[1;34m\]\w \[\e[3;91m\]\$(parse_git_branch)\[\e[00m\]$ "
+
+
+
