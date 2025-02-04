@@ -1,6 +1,17 @@
 
 # Alias
 
+## file list
+
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+
+## laravel
+
+alias art='php artisan'
+
 ## Docker commands
 
 alias dl="docker ps -l -q"
@@ -13,7 +24,7 @@ alias dboot="sudo service docker start"
 
 alias gs="git status"
 alias gst="git status -sb"
-alias gl="git log"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias ga="git add"
 alias gaa="git add -A"
 alias gal="git add ."
